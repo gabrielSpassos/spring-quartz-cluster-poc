@@ -31,3 +31,11 @@ spring:
         isClustered: true
       scheduler:
         instanceId: AUTO
+  main:
+    allow-bean-definition-overriding: true
+
+schedule:
+  cron:
+    job:
+      a: '0/2 * * ? * * *'
+      b: '0/2 * * ? * * *'

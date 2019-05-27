@@ -6,6 +6,10 @@ This is what this poc is about.
 
 Check this [link](https://jeroenbellen.com/configuring-a-quartz-scheduler-in-a-clustered-spring-boot-application/)
 
+## Tips
+
+This annotation "@DisallowConcurrentExecution" creates the effect of only one instance execute some task
+
 ### Usage
 
 * run docker compose

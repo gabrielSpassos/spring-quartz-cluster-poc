@@ -1,6 +1,6 @@
 package com.gabrielspassos.poc.configs;
 
-import com.gabrielspassos.poc.jobs.AJob;
+import com.gabrielspassos.poc.jobs.BJob;
 import org.quartz.CronScheduleBuilder;
 import org.quartz.JobBuilder;
 import org.quartz.JobDetail;
@@ -10,24 +10,24 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-public class AJobConfig {
+public class BJobConfig {
 
     @Bean
-    public JobDetail jobADetails() {
+    public JobDetail jobBDetails() {
         return JobBuilder
-                .newJob(AJob.class)
-                .withIdentity("sampleJobA")
+                .newJob(BJob.class)
+                .withIdentity("sampleJobB")
                 .storeDurably()
                 .build();
     }
 
     @Bean
-    public Trigger jobATrigger() {
+    public Trigger jobBTrigger() {
         return TriggerBuilder
                 .newTrigger()
-                .forJob(jobADetails())
-                .withIdentity("sampleTriggerA")
-                .withSchedule(CronScheduleBuilder.cronSchedule(ScheduleConfig.A_JOB_CRON_SCHEDULE))
+                .forJob(jobBDetails())
+                .withIdentity("sampleTriggerB")
+                .withSchedule(CronScheduleBuilder.cronSchedule(ScheduleConfig.B_JOB_CRON_SCHEDULE))
                 .build();
     }
 }

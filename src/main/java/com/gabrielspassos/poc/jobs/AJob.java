@@ -15,9 +15,8 @@ public class AJob implements Job {
     @Override
     public void execute(JobExecutionContext context) throws JobExecutionException {
         try {
-            logger.info("Executando A job");
             String id = context.getJobDetail().getKey().getName();
-            logger.info("Job detail id {}", id);
+            logger.info("Executing A job, id {}", id);
         } catch (Exception e) {
             throw new JobExecutionException(e);
         }
