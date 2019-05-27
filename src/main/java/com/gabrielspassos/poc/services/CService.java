@@ -14,7 +14,7 @@ public class CService {
     public Integer getRandomEvenNumber() {
         Integer randomNumber = getRandomNumber();
         return Optional.of(randomNumber)
-                .filter(this::numberIsEven)
+                .filter(this::isNumberEven)
                 .orElseThrow(IllegalArgumentException::new);
     }
 
@@ -22,7 +22,7 @@ public class CService {
         return new Random().nextInt((MAX_RANDOM_NUMBER - MIN_RANDOM_NUMBER) + 1) + MIN_RANDOM_NUMBER;
     }
 
-    private Boolean numberIsEven(Integer number) {
+    private Boolean isNumberEven(Integer number) {
         return number % 2 == 0;
     }
 }
