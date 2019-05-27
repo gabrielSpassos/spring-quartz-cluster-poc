@@ -18,6 +18,7 @@ public class BJob implements Job {
             String id = context.getJobDetail().getKey().getName();
             logger.info("Executing B job, id {}", id);
         } catch (Exception e) {
+            logger.error("Error at B job", e);
             throw new JobExecutionException(e);
         }
     }

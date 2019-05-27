@@ -8,14 +8,20 @@ public class ScheduleConfig {
 
     public static String A_JOB_CRON_SCHEDULE;
     public static String B_JOB_CRON_SCHEDULE;
+    public static String C_JOB_CRON_SCHEDULE;
 
-    @Value("${schedule.cron.job.a}")
+    @Value("${schedule.cron.jobs.a}")
     public void setAJobCronSchedule(String aJobCronSchedule) {
         A_JOB_CRON_SCHEDULE = aJobCronSchedule;
     }
 
-    @Value("${schedule.cron.job.b}")
+    @Value("${schedule.cron.jobs.b}")
     public void setBJobCronSchedule(String bJobCronSchedule) {
         B_JOB_CRON_SCHEDULE = bJobCronSchedule;
+    }
+
+    @Value("${schedule.cron.jobs.c}")
+    public void setCJobCronSchedule(String cJobCronSchedule) {
+        C_JOB_CRON_SCHEDULE = cJobCronSchedule;
     }
 }

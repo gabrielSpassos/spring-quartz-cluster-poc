@@ -10,6 +10,8 @@ Check this [link](https://jeroenbellen.com/configuring-a-quartz-scheduler-in-a-c
 
 This annotation "@DisallowConcurrentExecution" creates the effect of only one instance execute some task
 
+Once schedule cron trigger created, the value used to run job is the one stored at database 
+
 ### Usage
 
 * run docker compose
