@@ -6,9 +6,9 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class ScheduleConfig {
 
-    public static String A_JOB_CRON_SCHEDULE;
-    public static String B_JOB_CRON_SCHEDULE;
-    public static String C_JOB_CRON_SCHEDULE;
+    static String A_JOB_CRON_SCHEDULE;
+    static String B_JOB_CRON_SCHEDULE;
+    static String C_JOB_CRON_SCHEDULE;
 
     @Value("${schedule.cron.jobs.a}")
     public void setAJobCronSchedule(String aJobCronSchedule) {
